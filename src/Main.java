@@ -9,7 +9,7 @@ class Main {
             arr[i] = sc.nextInt();
         }
         int min = arr[0];
-        int minsec = arr[1];
+        int minsec = -1;
 
         for (int i = 1; i < arr.length; i++) {
             if (arr[i] < min) {
@@ -18,6 +18,7 @@ class Main {
             } else if (arr[i] > min && arr[i] < minsec) {
                 minsec = arr[i];
             }
+//            minsec = -1;
 
         }
         System.out.print(minsec);
