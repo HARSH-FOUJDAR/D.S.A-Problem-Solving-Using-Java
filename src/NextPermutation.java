@@ -2,46 +2,46 @@ import java.util.Arrays;
 
 public class NextPermutation {
     static void main(String[] args) {
-        int[] arr = {1, 1, 5};
-        Premutation(arr);
+        int[] arr = {1, 2, 3};
+        nextPermutation(arr);
         System.out.print(Arrays.toString(arr));
 
     }
 
-    public static void Premutation(int[] nums) {
-        int index = -1;
-        for (int i = nums.length - 2; i > 0; i--) {
-            if (nums[i] < nums[i + 1]) {
-                index = i;
-                break;
-            }
-        }
-        if (index == -1) {
-            reverse(nums, 0, nums.length - 1);
-            return;
-        }
-        for (int j = nums.length - 1; j > index; j--) {
-            if (nums[j] > nums[index]) {
-                swap(nums, j, index);
-                break;
-            }
-        }
-        reverse(nums, index + 1, index - 1);
+    public static void swap(int[] num, int i, int j) {
+        int temp = num[i];
+        num[i] = num[j];
+        num[j] = temp;
     }
 
-    //This is Fuction help to Swaping
-    public static void swap(int[] nums, int i, int j) {
-        int temp = nums[i];
-        nums[i] = nums[j];
-        nums[j] = temp;
-    }
-
-    //This is Fuction use to Reverse the number
     public static void reverse(int[] num, int start, int end) {
         while (start < end) {
             swap(num, start, end);
             start++;
             end--;
         }
+    }
+
+    public static void nextPermutation(int[] nums) {
+        int n = nums.length;
+        int index = -1;
+        for (int j = n - 2; j > 0; j--) {
+            if (nums[j] < nums[j + 1]) {
+                index = j;
+                break;
+            }
+        }
+        if (index == -1) {
+            reverse(nums, 0, n - 1);
+            return;
+        }
+
+        for (int i = nums.length - 1; i > index; i--) {
+            if (nums[i] > nums[index]) {
+                swap(nums, i, index);
+                break;
+            }
+        }
+        reverse(nums, index + 1, index - 1);
     }
 }
