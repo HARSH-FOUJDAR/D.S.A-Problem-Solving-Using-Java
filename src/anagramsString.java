@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class anagramsString {
     static void main(String[] args) {
         String str1 = "listen";
@@ -6,24 +8,14 @@ public class anagramsString {
     }
 
     public static boolean AnagramCeck(String str1, String str2) {
-        int i = 0;
-        int j = str2.length() - 1;
-        boolean found = false;
         if (str1.length() != str2.length()) {
-            found = false;
+            return false;
         }
-        while (j > i) {
-            if (str1.charAt(i) != str2.charAt(j)) {
-                found = false;
-                break;
-            } else {
-                found = true;
-            }
 
-
-            i++;
-            j--;
-        }
-        return found;
+        char[] s1 = str1.toCharArray();
+        char[] s2 = str2.toCharArray();
+        Arrays.sort(s1);
+        Arrays.sort(s2);
+        return Arrays.equals(s1, s2);
     }
 }
