@@ -11,4 +11,13 @@ public class ReverseString {
         }
     }
 
+    static class ListNodeLinked {
+        int val;
+        ReverseLinkedListsts.ListNode next;
+
+        ListNodeLinked(int val) {
+            this.val = val;
+            this.next = null;
+        }
+    }
 }

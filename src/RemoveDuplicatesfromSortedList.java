@@ -42,10 +42,10 @@ public class RemoveDuplicatesfromSortedList {
 
 
     //Using the LinkedList DataStracture
-//    public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
-//        ListNode first = list1.next;
-//        ListNode second = list2.next;
-//        ListNode newnode = null;
+//    public ReverseLinkedListsts.ListNode mergeTwoLists(ReverseLinkedListsts.ListNode list1, ReverseLinkedListsts.ListNode list2) {
+//        ReverseLinkedListsts.ListNode first = list1.next;
+//        ReverseLinkedListsts.ListNode second = list2.next;
+//        ReverseLinkedListsts.ListNode newnode = null;
 //        int f = 0;
 //        int s = 0;
 //        while (first != null || second != null) {
@@ -62,7 +62,7 @@ public class RemoveDuplicatesfromSortedList {
 //
 //            }
 //        }
-//        return ListNode;
+//        return ReverseLinkedListsts.ListNode;
 //    }
 
 }

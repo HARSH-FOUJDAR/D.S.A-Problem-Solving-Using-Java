@@ -11,7 +11,7 @@ public class PalindromeLinkedList {
 
     }
 
-    public void isPalindrome(ListNode head) {
+    public void isPalindrome(ReverseLinkedListsts.ListNode head) {
 
     }
 }

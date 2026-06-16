@@ -1,3 +1,7 @@
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
+
 class LinkedList {
 
     Node head;
@@ -62,6 +66,20 @@ class LinkedList {
         }
 
         System.out.println("null");
+    }
+
+    static class Employee {
+        static void main(String[] args) {
+            List<JavaStreamApi> newList = Arrays.asList(
+                    new JavaStreamApi(1, "Harsh", 5000),
+                    new JavaStreamApi(2, "Harsh", 3000),
+                    new JavaStreamApi(3, "KARrsh", 8000)
+            );
+            newList.stream()
+                    .sorted(Comparator.comparing(JavaStreamApi::getSalery))
+                    .forEach(System.out::println);
+
+        }
     }
 
     // Node class

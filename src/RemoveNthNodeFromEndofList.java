@@ -3,7 +3,7 @@ public class RemoveNthNodeFromEndofList {
 
     }
 
-    public ListNode removeNthFromEnd(ListNode head, int n) {
+    public ReverseLinkedListsts.ListNode removeNthFromEnd(ReverseLinkedListsts.ListNode head, int n) {
         int length = 0;
         while (head != null) {
             head = head.next;
@@ -11,7 +11,7 @@ public class RemoveNthNodeFromEndofList {
         }
         int indextoSerach = length - n;
         int i = 0;
-        ListNode prev = head;
+        ReverseLinkedListsts.ListNode prev = head;
         while (i < indextoSerach) {
             prev = prev.next;
             i++;

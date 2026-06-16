@@ -1,13 +1,3 @@
-class ListNodeLinked {
-    int val;
-    ListNode next;
-
-    ListNodeLinked(int val) {
-        this.val = val;
-        this.next = null;
-    }
-}
-
 class ReverseLinkedListsts {
     public static ListNode Reverse(ListNode head) {
         if (head == null || head.next == null) {
@@ -44,5 +34,15 @@ class ReverseLinkedListsts {
 
         System.out.print("Reversed: ");
         print(head);
+    }
+
+    static class ListNode {
+        int val;
+        ListNode next;
+
+        ListNode(int val) {
+            this.val = val;
+            this.next = null;
+        }
     }
 }
