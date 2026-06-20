@@ -1,35 +1,22 @@
-class ListNodes {
-    int val;
-    ListNode next;
-
-    // Constructour
-
-    ListNodes(int val) {
-        this.val = val;
-        next = null;
-    }
-
-}
-
 public class SortTheArraysAssendingOrederFromLinkedList {
     static void main(String[] args) {
 
-        ListNode newNode = new ListNode(0);
-        ListNode current = newNode;
-        current.next = new ListNode(1);
-        current.next.next = new ListNode(2);
-        current.next.next.next = new ListNode(3);
-        ListNode revrse = reverse(newNode);
+        RemoveDuplicatesfromSortedList.ListNode newNode = new RemoveDuplicatesfromSortedList.ListNode(0);
+        RemoveDuplicatesfromSortedList.ListNode current = newNode;
+        current.next = new RemoveDuplicatesfromSortedList.ListNode(1);
+        current.next.next = new RemoveDuplicatesfromSortedList.ListNode(2);
+        current.next.next.next = new RemoveDuplicatesfromSortedList.ListNode(3);
+        RemoveDuplicatesfromSortedList.ListNode revrse = reverse(newNode);
 
         printNode(revrse);
 
     }
 
 
-    public static ListNode reverse(ListNode head) {
-        ListNode curr = head;
-        ListNode prev = null;
-        ListNode next;
+    public static RemoveDuplicatesfromSortedList.ListNode reverse(RemoveDuplicatesfromSortedList.ListNode head) {
+        RemoveDuplicatesfromSortedList.ListNode curr = head;
+        RemoveDuplicatesfromSortedList.ListNode prev = null;
+        RemoveDuplicatesfromSortedList.ListNode next;
         while (curr != null) {
             next = curr.next;
             curr.next = prev;
@@ -40,7 +27,7 @@ public class SortTheArraysAssendingOrederFromLinkedList {
         return prev;
     }
 
-    public static void printNode(ListNode head) {
+    public static void printNode(RemoveDuplicatesfromSortedList.ListNode head) {
         while (head != null) {
             System.out.println(head.val + " ");
             head = head.next;

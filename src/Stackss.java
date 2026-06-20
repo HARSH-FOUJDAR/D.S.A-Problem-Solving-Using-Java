@@ -54,4 +54,17 @@ public class Stackss {
             return head.data;
         }
     }
+
+    static class ListNodes {
+        int val;
+        RemoveDuplicatesfromSortedList.ListNode next;
+
+        // Constructour
+
+        ListNodes(int val) {
+            this.val = val;
+            next = null;
+        }
+
+    }
 }

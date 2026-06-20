@@ -5,4 +5,14 @@ public class ConvertelsiustoFahrenheit {
         int feherenite = (num * 9 / 5) + 32;
         System.out.print(feherenite + " F");
     }
+
+    static class Linkedlist {
+        int val;
+        RemoveDuplicatesfromSortedList.ListNode next;
+
+        Linkedlist(int val) {
+            this.val = val;
+            next = null;
+        }
+    }
 }

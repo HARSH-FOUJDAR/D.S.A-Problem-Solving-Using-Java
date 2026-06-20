@@ -29,4 +29,54 @@ public class RemoveDuplicatesfromSortedLis {
         }
         return head;
     }
+
+    public static class RemoveCycleInLinkedList {
+
+        public static void removeCycle(RemoveDuplicatesfromSortedList.ListNode head) {
+            if (head == null || head.next == null) {
+                return;
+            }
+
+            RemoveDuplicatesfromSortedList.ListNode slow = head;
+            RemoveDuplicatesfromSortedList.ListNode fast = head;
+            boolean found = false;
+
+            // Detect cycle
+            while (fast != null && fast.next != null) {
+                slow = slow.next;
+                fast = fast.next.next;
+
+                if (slow == fast) {
+                    found = true;
+                    break;
+                }
+            }
+
+            // No cycle found
+            if (!found) {
+                return;
+            }
+
+            // Find start of cycle
+            slow = head;
+
+            // Special case: cycle starts at head
+            if (slow == fast) {
+                while (fast.next != slow) {
+                    fast = fast.next;
+                }
+                fast.next = null;
+                return;
+            }
+
+            // Find node before cycle start
+            while (slow.next != fast.next) {
+                slow = slow.next;
+                fast = fast.next;
+            }
+
+            // Remove cycle
+            fast.next = null;
+        }
+    }
 }

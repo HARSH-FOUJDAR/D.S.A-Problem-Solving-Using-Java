@@ -9,4 +9,16 @@ public class findthefactorial {
         }
         return n *= Fec(n - 1);
     }
+
+    static class ListNode {
+        int val;
+        RemoveDuplicatesfromSortedList.ListNode next;
+
+        //Constructor
+
+        ListNode(int val) {
+            this.val = val;
+
+        }
+    }
 }

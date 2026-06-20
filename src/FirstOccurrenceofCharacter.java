@@ -18,4 +18,28 @@ public class FirstOccurrenceofCharacter {
         }
         return ans;
     }
+
+    public static class FindTheLargestUsingTheLinkedlist {
+        static void main(String[] args) {
+            RemoveDuplicatesfromSortedList.ListNode newans = new RemoveDuplicatesfromSortedList.ListNode(0);
+            RemoveDuplicatesfromSortedList.ListNode current = newans;
+            current.next = new RemoveDuplicatesfromSortedList.ListNode(1);
+            current.next.next = new RemoveDuplicatesfromSortedList.ListNode(2);
+            System.out.println(max(newans));
+
+        }
+
+        public static int max(RemoveDuplicatesfromSortedList.ListNode head) {
+            int max = head.val;
+            RemoveDuplicatesfromSortedList.ListNode current = head;
+
+            while (current != null) {
+                if (current.val > max) {
+                    max = current.val;
+                }
+                current = current.next;
+            }
+            return max;
+        }
+    }
 }
