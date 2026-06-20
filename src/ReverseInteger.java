@@ -1,6 +1,6 @@
 public class ReverseInteger {
     static void main(String[] args) {
-        int num = 1534236469;
+        int num = 123;
         System.out.println(RevreseInterger(num));
     }
 
@@ -13,7 +13,7 @@ public class ReverseInteger {
             num = num / 10;
 
         }
-        if (ans > Integer.MAX_VALUE || ans < Integer.MAX_VALUE) {
+        if (ans > Integer.MAX_VALUE || ans < Integer.MIN_VALUE) {
             return 0;
         }
         return ans;
