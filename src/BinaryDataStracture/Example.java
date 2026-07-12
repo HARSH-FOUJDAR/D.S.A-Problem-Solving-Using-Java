@@ -5,10 +5,10 @@ import java.util.Queue;
 
 public class Example {
     static void main(String[] args) {
-        int[] node = {1, 2, 4, -1, -1, 5, -1, -1, 3, -1, 6, -1, -1};
+        int[] node = {3, 9, 20, -1, -1, 15, 7};
         BinaryTree tree = new BinaryTree();
         Node root = BinaryTree.buildTree(node);
-        System.out.println(diameter2(root).diam);
+        System.out.println(height(root));
     }
 
     public static void preorder(Node root) {
@@ -131,9 +131,24 @@ public class Example {
         int diam3 = left.ht + right.ht + 1;
 
         int mydiam = Math.max(Math.max(diam1, diam2), diam3);
-
         Threeinfo myInfo = new Threeinfo(myheight, mydiam);
         return myInfo;
+    }
+
+    static class BinaryTree {
+        static int idx = -1;
+
+        public static Node buildTree(int[] nodes) {
+            idx++;
+            if (nodes[idx] == -1) {
+                return null;
+            }
+
+            Node newnodes = new Node(nodes[idx]);
+            newnodes.left = buildTree(nodes);
+            newnodes.rigth = buildTree(nodes);
+            return newnodes;
+        }
     }
 
     static class Node {
@@ -148,21 +163,6 @@ public class Example {
         }
     }
 
-    static class BinaryTree {
-        static int idx = -1;
-
-        public static Node buildTree(int[] node) {
-            idx++;
-            if (node[idx] == -1) {
-                return null;
-            }
-            Node newNode = new Node(node[idx]);
-            newNode.left = buildTree(node);
-            newNode.rigth = buildTree(node);
-
-            return newNode;
-        }
-    }
 
     static class Threeinfo {
         int ht;
@@ -173,5 +173,6 @@ public class Example {
             this.diam = diam;
         }
     }
+
 
 }
