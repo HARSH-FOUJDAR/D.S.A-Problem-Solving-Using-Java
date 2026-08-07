@@ -60,6 +60,7 @@ public class Example {
 
         return leftsum + rightsum + root.data;
 
+
     }
 
     public static void laveloder(Node root) {

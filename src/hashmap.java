@@ -1,4 +1,5 @@
 import java.util.HashMap;
+import java.util.Map;
 
 public class hashmap {
     static void main(String[] arg) {
@@ -9,9 +10,13 @@ public class hashmap {
         map.put(3, "Suman");
         map.put(4, "Indu");
 
-        System.out.println(map.containsKey(2));
-        System.out.println(map.get(1));
+//        System.out.println(map.containsKey(2));
+//        System.out.println(map.get(1));
 
+        for (Map.Entry<Integer, String> val : map.entrySet()) {
+            System.out.println(val.getKey());
+            System.out.println(val.getValue());
+        }
 
     }
 }
